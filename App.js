@@ -5,8 +5,13 @@ import {
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat';
 
+import * as SplashScreen from 'expo-splash-screen';
+
 import Cesta from './src/telas/Cesta';
 import mock from './src/mocks/cesta'
+
+// Keep the splash screen visible while we fetch resources
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   let [fonteCarregada] = useFonts({
